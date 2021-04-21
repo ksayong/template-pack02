@@ -1,0 +1,80 @@
+//font宣言
+$NotoSans: 'Noto Sans JP', sans-serif;
+$KiwiMaru: 'Kiwi Maru', serif;
+
+//テキストカラー
+$font-black: #2c2b2b;
+$font-gray: #a0a0a0;
+$font-white: #ffffff;
+
+//フォントサイズ 基準設定 1.0rem = 10px
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-feature-settings: 'palt'; /* カーニング */
+  -webkit-text-size-adjust: 100%;
+  font-family: $KiwiMaru;
+  color: $font-black;
+
+  //デバッグのためのコード
+  // @include mq-down(md) {
+  // 	background-color: azure;
+  // }
+}
+
+p {
+  color: $font-black;
+  font-size: 1.6rem;
+  line-height: 2em;
+  letter-spacing: 0.025em;
+  @include mq-down(md) {
+    font-size: 1.4rem;
+  }
+}
+
+a {
+  font-size: 1.6rem;
+  display: inline-block;
+  color: $font-black;
+  text-decoration: none;
+  vertical-align: middle;
+  transition: 0.8s;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  @include mq-down(md) {
+    font-size: 1.4rem;
+  }
+}
+
+img {
+  height: auto;
+}
+
+figure,
+figcaption {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  display: block;
+}
+
+@include mq-down(md) {
+  .pc {
+    display: none !important;
+  }
+}
+@include mq-up(md) {
+  .sp {
+    display: none !important;
+  }
+}

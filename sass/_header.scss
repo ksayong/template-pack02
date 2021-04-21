@@ -1,0 +1,37 @@
+/* =======================================================
+
+header
+ヘッダー
+
+======================================================== */
+
+header {
+  padding: 10px 20px;
+}
+
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_nav {
+  display: flex;
+  align-items: center;
+  ul {
+    display: flex;
+  }
+}
+
+.header_menuList {
+  &:not(:last-of-type) {
+    margin-right: 20px;
+  }
+
+  a {
+    display: block;
+    font-size: 1.6rem;
+    @include mq-down(md) {
+      font-size: 1.2rem;
+    }
+  }
+}

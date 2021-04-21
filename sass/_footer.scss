@@ -1,0 +1,118 @@
+/* =======================================================
+
+footer
+フッター
+
+======================================================== */
+
+footer {
+  background-color: $font-gray;
+  padding: 60px 20px 30px;
+}
+
+.footer_nav {
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+}
+
+.footer_inner {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.footermenu_listItem {
+  &.head {
+    padding-bottom: 10px;
+    .footermenu_link {
+      font-size: 1.8rem;
+      padding-left: 0;
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  &:not(:last-of-type) {
+    .footermenu_link {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.footermenu_link {
+  display: block;
+  color: $font-white;
+  font-size: 1.4rem;
+  position: relative;
+  padding-left: 10px;
+
+  &::before {
+    content: '';
+    background-color: $font-white;
+    width: 6px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+//TOPに戻るボタン
+.top_icon {
+  bottom: 20px;
+  cursor: pointer;
+  right: 9px;
+  position: fixed;
+  z-index: 10;
+  @include mq-down(md) {
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+    right: 10px;
+  }
+
+  span {
+    background-color: rgba(255, 255, 255, 0.651);
+    border-radius: 50%;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: block;
+    width: 48px;
+    height: 48px;
+    display: block;
+    transition: 0.4s;
+    &::after {
+      content: '';
+      background-image: url(../img/common/ico_topArrow.svg);
+      display: block;
+      position: absolute;
+      width: 7px;
+      height: 21px;
+      z-index: 1;
+      top: 52%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+
+    &:hover {
+      background-color: $font-gray;
+
+      &::after {
+        background-image: url(../img/common/ico_topArrow-hover.svg);
+      }
+    }
+  }
+}
+
+.copyright_block {
+  padding-top: 50px;
+}
+
+.copyright_text {
+  color: $font-white;
+  text-align: center;
+}

@@ -1,0 +1,41 @@
+/* -------------- ブレークポイント作成 ここから ---------------- */
+// min-width ×××× px以上の場合
+$breakpoint-up: (
+  'xs': 'print, screen and (min-width: 350px)',
+  'sm': 'print, screen and (min-width: 400px)',
+  'md': 'print, screen and (min-width: 768px)',
+  'lg': 'only screen and (min-width: 992px)',
+  'point': 'only screen and (min-width: 1123px)',
+  'xl': 'only screen and (min-width: 1200px)',
+) !default;
+
+// max-width ×××× px未満の場合
+$breakpoint-down: (
+  'xs': 'only screen and (max-width: 349px)',
+  'sm': 'only screen and (max-width: 399px)',
+  'md': 'only screen and (max-width: 767px)',
+  'lg': 'print, screen and (max-width: 991px)',
+  'point': 'print, screen and (max-width: 1122px)',
+  'xl': 'print, screen and (max-width: 1199px)',
+) !default;
+
+// @mixinの定義
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+/* -------------- ブレークポイント作成 ここまで ---------------- */
+/* -------------- calc mixin ここから ---------------- */
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -o-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+/* -------------- calc mixin ここまで ----------------	*/
