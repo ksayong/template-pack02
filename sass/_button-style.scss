@@ -5,9 +5,27 @@ button
 
 ======================================================== */
 
-.button {
-  max-width: 250px;
-  width: 100%;
+.btn {
+  border: 2px solid;
+  text-align: center;
+  cursor: pointer;
   display: block;
-  padding: 15px;
+  padding: 15px 15px;
+  border-radius: 30px;
+
+  &.primary {
+    color: $font-white;
+    background-color: $main-color;
+
+    &:hover {
+      background-color: $font-white;
+      color: $font-black;
+    }
+  }
+}
+
+.btn_wrapper {
+  &.top_news {
+    max-width: 250px;
+  }
 }

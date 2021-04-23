@@ -102,11 +102,17 @@ common
 }
 
 .common_head {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   text-align: left;
   margin-bottom: 50px;
   @include mq-down(md) {
     font-size: 1.8rem;
+  }
+
+  span {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    display: block;
   }
 
   &.center {
