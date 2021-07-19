@@ -23,22 +23,31 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<header class="header_pc">
-				<div class="header_inner">
-					<a href="./index.html" class="header_logo">
-						<img src="./img/common/logo.svg" alt="ロゴ">
-					</a>
-					<nav class="header_nav">
-						<ul>
-							<li class="header_menuList"><a href="#">メニュー01</a></li>
-							<li class="header_menuList"><a href="#">メニュー02</a></li>
-							<li class="header_menuList"><a href="#">メニュー03</a></li>
-							<li class="header_menuList"><a href="#">メニュー04</a></li>
-							<li class="header_menuList"><a href="#">メニュー05</a></li>
-						</ul>
-					</nav>
+			<header class="header">
+				<h1 class="header_logo"><a href="./index.html">LOGO</a></h1>
+				<div class="hamburger_button sp">
+					<button id="btn-trigger" class="btn-trigger">
+						<span class="first"></span>
+						<span class="second"></span>
+						<span class="third"></span>
+					</button>
 				</div>
+				<nav id="gNav" class="gNav">
+					<div class="menu_wrapper">
+							<div class="gNav_inner">
+							<!-- <h1 class="header_logo">LOGO</h1> -->
+							<ul class="gNav_list">
+								<li class="header_menuList"><a href="#">メニュー01</a></li>
+								<li class="header_menuList"><a href="#">メニュー02</a></li>
+								<li class="header_menuList"><a href="#">メニュー03</a></li>
+								<li class="header_menuList"><a href="#">メニュー04</a></li>
+								<li class="header_menuList"><a href="#">メニュー05</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
 			</header>
+
 			<main class="page">
 				<section class="top_hero height_100vh">
 				</section>

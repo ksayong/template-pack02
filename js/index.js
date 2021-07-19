@@ -56,12 +56,15 @@ $(function () {
 		return false;
 	});
 
-  //ハンバーガーメニュー
-	$('#btn-trigger').on('click', function () {
-		$('.header_nav').fadeToggle();
-		$('body').toggleClass('hamburger');
-		$('.btn-trigger').toggleClass('active');
+	//ハンバーガーメニュー
+	$(function () {
+		$('#btn-trigger').on('click', function () {
+				$('.gNav').fadeToggle();
+				$('body').toggleClass('hamburger');
+				$('.btn-trigger').toggleClass('active');
+		});
 	});
+
 
 	//フッターメニュー
 	$('.toggle_switch').on('click', function () {
